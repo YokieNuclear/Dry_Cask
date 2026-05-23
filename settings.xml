@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<settings>
+  <run_mode>fixed source</run_mode>
+  <particles>1000000</particles>
+  <batches>20</batches>
+  <source particle="neutron" strength="1.0" type="independent">
+    <space origin="0.0 0.0 0.0" type="cylindrical">
+      <r parameters="0 60.0" type="uniform"/>
+      <phi parameters="0 6.283185307179586" type="uniform"/>
+      <z parameters="-200.0 200.0" type="uniform"/>
+    </space>
+    <angle type="isotropic"/>
+    <energy parameters="977000.0 2.996e-06" type="watt"/>
+  </source>
+  <source particle="photon" strength="10.0" type="independent">
+    <space origin="0.0 0.0 0.0" type="cylindrical">
+      <r parameters="0 60.0" type="uniform"/>
+      <phi parameters="0 6.283185307179586" type="uniform"/>
+      <z parameters="-200.0 200.0" type="uniform"/>
+    </space>
+    <angle type="isotropic"/>
+    <energy type="discrete">
+      <parameters>662000.0 1274000.0 123000.0 1173000.0 1333000.0 898000.0 722000.0 606000.0 0.7117437722419928 0.08540925266903912 0.06405693950177935 0.03558718861209964 0.03558718861209964 0.02846975088967971 0.02135231316725978 0.01779359430604982</parameters>
+    </energy>
+  </source>
+  <output>
+    <summary>true</summary>
+    <tallies>false</tallies>
+  </output>
+  <photon_transport>true</photon_transport>
+</settings>
